@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    width: 100%;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+.form-section, .recipe-list-section {
+    margin-bottom: 20px;
+}
+.recipe-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.recipe-card.favorite {
+    border-color: gold;
+}
+.recipe-form input, .recipe-form textarea, .recipe-form select, .recipe-form button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+}
+.recipe-form label {
+    font-weight: bold;
+}
+.filter-section, .sort-section, .search-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.filter-section select, .sort-section select, .search-section input {
+    padding: 10px;
+}
