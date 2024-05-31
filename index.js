@@ -123,11 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
         saveRecipesToStorage(recipes);
     };
 
-    const deleteRecipe = (id) => {
-        let recipes = loadRecipesFromStorage();
+   function deleteRecipe(id) {
+    const confirmDelete = confirm("Are you sure you want to delete this recipe?");
+    if (confirmDelete) {
+        let recipes = JSON.parse(localStorage.getItem('recipes'));
         recipes = recipes.filter(recipe => recipe.id !== id);
-        saveRecipesToStorage(recipes);
-    };
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+        renderRecipes();
+    }
+}
 
     const filterAndSortRecipes = (recipes) => {
         const category = categoryFilter.value;
